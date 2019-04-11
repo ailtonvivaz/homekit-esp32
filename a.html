@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
+	<title>Introduction</title>
+	<style>
+		html {
+			height:100%;
+		}
+		body {
+			background-color:#1E023F;
+			margin:0;
+			height:100%;
+		}
+	</style>
+	<!-- copy these lines to your document head: -->
+	<link rel="stylesheet" type="text/css" href="img/style.css">
+	<meta name="viewport" content="user-scalable=no, width=1024" />
+	<!-- end copy -->
+  </head>
+  <body>
+	<!-- copy these lines to your document: -->
+	<script type="text/javascript">
+		var divIds = ["page1", "page2", "page3", "page4", "page5", "page6"];
+		var maxPages = divIds.length;
+		function showDiv(showId) {
+			 for(var i = 0; i < divIds.length; i++) {
+				  if(divIds[i] === showId)
+                  {
+                      document.getElementById(showId).classList.add('fade_in');
+					  document.getElementById(showId).style.display = "block";
+                  }
+                  else
+					  document.getElementById(divIds[i]).style.display = "none";
+			 }
+		}
+		
+		function prevPage()
+		{
+			var id = Math.max(parseInt(document.getElementById('page').textContent)-1, 1);
+			document.getElementById('page').textContent = id;
+			showDiv('page'+String(id));
+			
+		}
+		
+		function nextPage()
+		{
+			var id = Math.min(parseInt(document.getElementById('page').textContent)+1, maxPages);
+			document.getElementById('page').textContent = id;
+			showDiv('page'+String(id));
+		}
+		
+	</script>
+    
+	<div style="margin:auto;position:relative;width:1024px;height:768px;overflow:hidden;" aria-live="polite">
+   	  <div id="page1" class="content">
+        	
+        	<img src="img/logo.png" alt="Computer Basement" width="612" height="459" class="centered fade_in" title="The Mother Computer">
+        	<h1 class="pink_text">A Binary Love Story</h1>
+        </div>
+      
+        <div id="page2" class="content centered" style="display:none">
+          <h1 class="pink_text">The Unkn0wn World</h1>
+          <p>There is an <span class="pink_text">unknown</span> and <span class="pink_text">peculiar</span> world inside a small computer. It's hidden from your eyes but the following story <span class="pink_text">is not</span>.</p>
+          <p>The creatures live their ordinary and unfortunately very short lives without asking any questions. Just walking towards <span class="pink_text">the imminent end</span>. </p>
+          <img class="centered" src="img/bg_01.png" width="55%" height="55%" alt="Computer Basement" title="The Mother Computer">
+        </div>
+        
+        <div id="page3" class="content centered" style="display:none">
+            <h1 class="pink_text">The Unlikely Meet1ng</h1>
+            <p>But something <span class="pink_text">really strange</span> happened to two of those little creatures.</p><h2><span class="pink_text fade_in_long">They fell in love.</span></h2>
+            <div style="width:100%; display:block; ">
+            <img class="move_right" style="display:block; position:relative; top:-20px; left:30px; opacity:75%;" src="img/creature.png" width="130px">
+            <img class="move_left" style="display:block; position:relative; float:right; top:70px; opacity:75%;" src="img/creature.png" width="130px">
+            </div>
+        </div>
+        
+	  <div id="page4" class="content centered" style="display:none">
+            <h1 class="pink_text">The Stubborn Love</h1>
+            <p>Unfortunately, their love was doomed to <span class="pink_text">failure</span>. They couldn't express themselves, nor their <span class="pink_text">love</span>.</p><h2><span class="pink_text fade_in_4s">But they won't give up. </span></h2>
+            <div style="width:100%; display:block; ">
+            <img class="centered blink" src="img/communication.png" alt="The Strange Communication">
+            <img class="send_msg" style="display:block; position:absolute; top:310px; left:350px" src="img/symbol1.png" width="55" alt="The Strange Communication">
+            <img class="send_msg" style="display:block; position:absolute; top:370px; left:350px" src="img/symbol2.png" width="55" alt="The Strange Communication">
+            <img class="send_msg" style="display:block; position:absolute; top:430px; left:350px" src="img/symbol3.png" width="55" alt="The Strange Communication">
+            <img class="send_msg" style="display:block; position:absolute; top:490px; left:350px" src="img/symbol4.png" width="55" alt="The Strange Communication">
+            </div>
+        </div>        
+        <div id="page5" class="content centered" style="display:none">
+        	<h1 class="pink_text">The Logical Implementation</h1>
+            <p>Fortunately, there is a <span class="pink_text">way out</span> of this misfortune.</p>
+            <h2><span class="pink_text fade_in_5s">You.</span></h2><br>
+            <p class="fade_in_5s">That's right, you. You and logic, of course. But don't worry, I'll help you with that.</p>
+            <img class="centered fade_in_5s" src="img/logic.png" width="596" height="156">
+        </div>
+        
+        <div id="page6" class="content" style="display:none">
+        	<h1 class="pink_text">HOW TO PLAY</h1>
+            <p class="centered">Slide the white circle out of the gamepad while it's on the chosen symbol.</p>
+            <div style="width:50%;  float:left; display:block; ">
+                <img class="centered swipe_right" style="display:block; position:absolute; top:300px; left:230px" src="img/hand.svg" width="20%" height="20%">
+                <img class="centered" src="img/game_pad_right.svg" width="50%" height="50%" alt="How to play" title="How to play">
+            </div>
+            <div style="width:50%; float:left; display:block; text-align:right;">
+                <img class="swipe_up" style="display:block; position:absolute; top:270px; right:100px; z-index: 999;" src="img/hand_up.svg" width="15%" height="15%">
+                <img class="centered" style="transform: rotate(90deg);" src="img/game_pad_left.svg" width="50%" height="50%" alt="How to play" title="How to play">
+            </div><br>
+            <div class="centered"><p><strong><span class="pink_text">Tip:</span> Press the center of gamepad to send the message!</strong></p></div><br>
+            <div class="centered">
+                <a href="@next" class="button ">Let's play!</a>
+            </div>
+        </div>
+        
+        
+        
+       <div style="width:1024px; height:168px; text-align:center;">
+       		<a href="#" onClick="prevPage()"><img src="img/left_bt.png" alt="previous page" width="44px"></a> <a href="#" onClick="nextPage()"><img src="img/right_bt.png" alt="previous page" width="44px"></a><div class="pages"><span id="page">1</span>  of 6</div>
+        	
+		</div>
+	</div>
+
+	<!-- end copy -->
+
+  </body>
+</html>
